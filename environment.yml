@@ -1,0 +1,22 @@
+name: tcga_analysis
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.9
+  - pandas=1.5.3
+  - numpy=1.24.3
+  - scikit-learn=1.2.2
+  - matplotlib=3.7.1
+  - seaborn=0.12.2
+  - jupyterlab=3.6.3
+  - pip=23.0.1
+  - pip:
+    - tqdm==4.65.0
+    - statsmodels==0.13.5
+    - openpyxl==3.1.2
+    - plotly==5.14.1
+    - adjustText==0.7.3
+    - scipy==1.10.1
+    - lifelines==0.27.4  # For survival analysis (optional)
