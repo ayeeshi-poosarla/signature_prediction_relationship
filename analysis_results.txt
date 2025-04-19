@@ -1,0 +1,82 @@
+Cancer Mutation Analysis Results
+===============================
+
+Loading and preparing data...
+Dataset loaded with 1094 samples and 178 features.
+Extracted 38 mutation features
+Extracted 38 normalized mutation features
+Extracted 100 gene expression features
+No specific immune marker genes provided. Using PCA to identify patterns...
+Created target variable using PCA. Class distribution: [547 547]
+
+--- Using normalized mutation features for the model ---
+Training set: 820 samples
+Testing set: 274 samples
+Selected 20 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_Frame_Shift_Ins: F-score=0.7585, p-value=3.8405e-01
+  Norm_Type_IGR: F-score=1.0000, p-value=3.1761e-01
+  Norm_Type_Intron: F-score=0.7749, p-value=3.7897e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Nonstop_Mutation: F-score=0.8112, p-value=3.6804e-01
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_->G: F-score=1.0324, p-value=3.0991e-01
+  Norm_SNV_->T: F-score=0.8005, p-value=3.7122e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_C>G: F-score=0.9903, p-value=3.1997e-01
+  Norm_SNV_C>T: F-score=0.5819, p-value=4.4578e-01
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+Performing grid search for hyperparameter tuning...
+Best hyperparameter C: 0.001
+
+Model Accuracy: 0.5365
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.54      0.55      0.54       137
+           1       0.54      0.52      0.53       137
+
+    accuracy                           0.54       274
+   macro avg       0.54      0.54      0.54       274
+weighted avg       0.54      0.54      0.54       274
+
+
+Feature Importance (top 10 positive and negative):
+                             Feature  Coefficient
+16                      Norm_SNV_C>A     0.030067
+14                      Norm_SNV_A>C     0.022928
+10                      Norm_SNV_->C     0.016824
+1                    Norm_Type_3'UTR     0.015645
+7                   Norm_Type_Silent     0.013507
+15                      Norm_SNV_A>T     0.013443
+3                      Norm_Type_IGR     0.011771
+4                   Norm_Type_Intron     0.010563
+2          Norm_Type_Frame_Shift_Ins    -0.006862
+18                      Norm_SNV_C>T    -0.008076
+12                      Norm_SNV_->T    -0.008628
+6         Norm_Type_Nonstop_Mutation    -0.010330
+0                    Total_Mutations    -0.012154
+11                      Norm_SNV_->G    -0.012345
+13                      Norm_SNV_A>-    -0.012386
+17                      Norm_SNV_C>G    -0.012471
+8   Norm_Type_Translation_Start_Site    -0.017481
+19                      Norm_SNV_T>C    -0.020217
+5        Norm_Type_Nonsense_Mutation    -0.023973
+9                       Norm_SNV_->A    -0.026151
+ROC-AUC Score: 0.5356
+ROC curve has been saved to 'roc_curve.png'
+Confusion matrix has been saved to 'confusion_matrix.png'
+Feature importance plot has been saved to 'feature_importance.png'
+
+Performing cross-validation...
+Cross-validation accuracy: 0.5037 ± 0.0086
+
+Analysis completed successfully.
