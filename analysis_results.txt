@@ -78,5 +78,3 @@ Feature importance plot has been saved to 'feature_importance.png'
 
 Performing cross-validation...
 Cross-validation accuracy: 0.5037 ± 0.0086
-
-Analysis completed successfully.
