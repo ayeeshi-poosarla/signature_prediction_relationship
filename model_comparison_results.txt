@@ -1,0 +1,102 @@
+Model Comparison Results
+======================
+
+Analysis Date: 2025-04-27 17:20:16
+
+Starting comprehensive model comparison...
+This analysis will compare Logistic Regression, Random Forest, Neural Network, and SVM models
+================================================================================
+
+1. Running Logistic Regression model...
+
+  Completed in 0.70 seconds
+  Accuracy: 0.5365
+  ROC-AUC: 0.5356
+  CV Accuracy: 0.5037
+
+2. Running Random Forest model...
+
+  Completed in 4.88 seconds
+  Accuracy: 0.6752
+  ROC-AUC: 0.7178
+  CV Accuracy: 0.7066
+
+3. Running Neural Network model...
+
+  Completed in 1.44 seconds
+  Accuracy: 0.6241
+  ROC-AUC: 0.6839
+  CV Accuracy: 0.6664
+
+4. Running SVM model...
+
+  Completed in 0.86 seconds
+  Accuracy: 0.5474
+  ROC-AUC: 0.5475
+  CV Accuracy: 0.5064
+
+
+Model Comparison Summary:
+================================================================================
+                     Accuracy   ROC-AUC  CV Accuracy  Runtime (s)  Features
+Logistic Regression  0.536500  0.535600     0.503700     0.700036      20.0
+Random Forest        0.675182  0.717833     0.706564     4.881343      25.0
+Neural Network       0.624088  0.683947     0.666390     1.442735      30.0
+SVM                  0.547445  0.547499     0.506425     0.858854      20.0
+
+
+Best Model Analysis:
+Best model by Accuracy: Random Forest (0.6752)
+Best model by ROC-AUC: Random Forest (0.7178)
+Best model by CV Accuracy: Random Forest (0.7066)
+Fastest model: Logistic Regression (0.70 seconds)
+
+
+Top Predictive Features by Model:
+================================================================================
+
+Logistic Regression - Top Features:
+  1. 16 Norm_SNV_C>A: 0.030067
+  2. 14 Norm_SNV_A>C: 0.022928
+  3. 10 Norm_SNV_->C: 0.016824
+  4. 1 Norm_Type_3'UTR: 0.015645
+  5. 7 Norm_Type_Silent: 0.013507
+  6. 15 Norm_SNV_A>T: 0.013443
+  7. 3 Norm_Type_IGR: 0.011771
+  8. 4 Norm_Type_Intron: 0.010563
+
+Random Forest - Top Features:
+  1. 23: 0.117893
+  2. 22: 0.104362
+  3. 21: 0.093726
+  4. 19: 0.066898
+  5. 24: 0.063675
+  6. 20: 0.054179
+  7. 16: 0.045909
+  8. 12: 0.045567
+  9. 0: 0.043617
+  10. 3: 0.043279
+
+Neural Network - Top Features:
+  1. Norm_Type_Splice_Site: 0.011100
+
+SVM - Top Features:
+  No features extracted
+
+
+Common Important Features Across Models:
+================================================================================
+No common features found across models
+Model comparison plots saved to 'model_comparison_metrics.png'
+Top features by model saved to 'top_features_by_model.png'
+Mutation signature analysis saved to 'mutation_signature_analysis.png'
+
+
+Mutation Signature Analysis:
+================================================================================
+
+Mutation types (count: 5), SNV types (count: 4)
+Average importance of mutation types: 0.0125
+Average importance of SNV types: 0.0208
+
+Model comparison completed successfully.

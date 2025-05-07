@@ -1,0 +1,156 @@
+Neural Network Classification Results
+==================================
+
+Loading and preparing data...
+Dataset loaded with 1094 samples and 178 features.
+Extracted 38 mutation features
+Extracted 38 normalized mutation features
+Extracted 100 gene expression features
+No specific immune marker genes provided. Using PCA to identify patterns...
+Created target variable using PCA. Class distribution: [547 547]
+
+--- Using normalized mutation features for Neural Network model ---
+Including 15 most variable gene expression features for modeling
+Training set: 820 samples
+Testing set: 274 samples
+
+Trying feature selection with method=mutual_info, k=20...
+Selected 20 top features using mutual_info:
+  Total_Mutations: Score=0.0259
+  Norm_Type_5'UTR: Score=0.0171
+  Norm_Type_Frame_Shift_Ins: Score=0.0183
+  Norm_Type_IGR: Score=0.0165
+  Norm_Type_In_Frame_Del: Score=0.0196
+  Norm_Type_Intron: Score=0.0126
+  Norm_Type_Missense_Mutation: Score=0.0154
+  Norm_Type_Silent: Score=0.0254
+  Norm_Type_Splice_Region: Score=0.0191
+  Norm_Type_Splice_Site: Score=0.0111
+  Norm_SNV_A>-: Score=0.0441
+  Norm_SNV_C>G: Score=0.0182
+  Norm_SNV_G>C: Score=0.0115
+  Norm_SNV_T>G: Score=0.0132
+  ENSG00000125414.19: Score=0.0559
+  ENSG00000167531.6: Score=0.0292
+  ENSG00000167676.4: Score=0.0248
+  ENSG00000141367.12: Score=0.0487
+  ENSG00000108298.12: Score=0.0407
+  ENSG00000120885.22: Score=0.0427
+Preliminary accuracy with method=mutual_info, k=20: 0.6095
+
+Trying feature selection with method=mutual_info, k=25...
+Selected 25 top features using mutual_info:
+  Total_Mutations: Score=0.0075
+  Norm_Type_3'Flank: Score=0.0241
+  Norm_Type_3'UTR: Score=0.0146
+  Norm_Type_5'Flank: Score=0.0323
+  Norm_Type_Frame_Shift_Ins: Score=0.0046
+  Norm_Type_IGR: Score=0.0083
+  Norm_Type_In_Frame_Del: Score=0.0154
+  Norm_Type_In_Frame_Ins: Score=0.0181
+  Norm_Type_Intron: Score=0.0219
+  Norm_Type_Nonsense_Mutation: Score=0.0080
+  Norm_Type_Silent: Score=0.0295
+  Norm_Type_Splice_Site: Score=0.0254
+  Norm_SNV_->A: Score=0.0280
+  Norm_SNV_->C: Score=0.0203
+  Norm_SNV_A>-: Score=0.0051
+  Norm_SNV_A>G: Score=0.0264
+  Norm_SNV_C>-: Score=0.0136
+  Norm_SNV_C>G: Score=0.0243
+  Norm_SNV_G>C: Score=0.0077
+  ENSG00000125414.19: Score=0.0321
+  ENSG00000171201.12: Score=0.0061
+  ENSG00000167676.4: Score=0.0239
+  ENSG00000141367.12: Score=0.0504
+  ENSG00000108298.12: Score=0.0408
+  ENSG00000120885.22: Score=0.0428
+Preliminary accuracy with method=mutual_info, k=25: 0.6314
+
+Trying feature selection with method=mutual_info, k=30...
+Selected 30 top features using mutual_info:
+  Total_Mutations: Score=0.0228
+  Norm_Type_5'Flank: Score=0.0059
+  Norm_Type_5'UTR: Score=0.0095
+  Norm_Type_IGR: Score=0.0277
+  Norm_Type_In_Frame_Ins: Score=0.0187
+  Norm_Type_Intron: Score=0.0115
+  Norm_Type_Missense_Mutation: Score=0.0140
+  Norm_Type_Nonstop_Mutation: Score=0.0122
+  Norm_Type_Silent: Score=0.0243
+  Norm_Type_Splice_Region: Score=0.0046
+  Norm_Type_Splice_Site: Score=0.0066
+  Norm_Type_Translation_Start_Site: Score=0.0287
+  Norm_SNV_->A: Score=0.0128
+  Norm_SNV_->G: Score=0.0042
+  Norm_SNV_->T: Score=0.0237
+  Norm_SNV_A>-: Score=0.0409
+  Norm_SNV_A>G: Score=0.0108
+  Norm_SNV_C>G: Score=0.0266
+  Norm_SNV_C>T: Score=0.0111
+  Norm_SNV_G>C: Score=0.0271
+  ENSG00000125414.19: Score=0.0195
+  ENSG00000092054.13: Score=0.0060
+  ENSG00000143632.14: Score=0.0146
+  ENSG00000161634.12: Score=0.0031
+  ENSG00000167531.6: Score=0.0045
+  ENSG00000211899.10: Score=0.0012
+  ENSG00000167676.4: Score=0.0225
+  ENSG00000141367.12: Score=0.0491
+  ENSG00000108298.12: Score=0.0411
+  ENSG00000120885.22: Score=0.0419
+Preliminary accuracy with method=mutual_info, k=30: 0.6350
+
+Selected optimal feature selection: method=mutual_info, k=30
+Selected 30 top features using mutual_info:
+  Norm_Type_3'Flank: Score=0.0427
+  Norm_Type_3'UTR: Score=0.0037
+  Norm_Type_5'Flank: Score=0.0091
+  Norm_Type_5'UTR: Score=0.0307
+  Norm_Type_Frame_Shift_Ins: Score=0.0148
+  Norm_Type_IGR: Score=0.0122
+  Norm_Type_In_Frame_Del: Score=0.0258
+  Norm_Type_In_Frame_Ins: Score=0.0142
+  Norm_Type_Intron: Score=0.0086
+  Norm_Type_Missense_Mutation: Score=0.0066
+  Norm_Type_Nonsense_Mutation: Score=0.0186
+  Norm_Type_Silent: Score=0.0244
+  Norm_Type_Splice_Region: Score=0.0090
+  Norm_Type_Splice_Site: Score=0.0127
+  Norm_SNV_A>-: Score=0.0434
+  Norm_SNV_A>G: Score=0.0114
+  Norm_SNV_C>-: Score=0.0088
+  Norm_SNV_C>G: Score=0.0132
+  Norm_SNV_G>-: Score=0.0145
+  Norm_SNV_G>C: Score=0.0323
+  Norm_SNV_T>A: Score=0.0230
+  Norm_SNV_T>G: Score=0.0029
+  ENSG00000125414.19: Score=0.0153
+  ENSG00000135222.6: Score=0.0096
+  ENSG00000171201.12: Score=0.0078
+  ENSG00000167531.6: Score=0.0203
+  ENSG00000167676.4: Score=0.0243
+  ENSG00000141367.12: Score=0.0492
+  ENSG00000108298.12: Score=0.0404
+  ENSG00000120885.22: Score=0.0424
+Performing simplified parameter search...
+Best hyperparameters: {'alpha': 0.001, 'hidden_layer_sizes': (50,)}
+
+Model Accuracy: 0.6241
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.60      0.73      0.66       137
+           1       0.66      0.52      0.58       137
+
+    accuracy                           0.62       274
+   macro avg       0.63      0.62      0.62       274
+weighted avg       0.63      0.62      0.62       274
+
+ROC-AUC Score: 0.6839
+ROC curve has been saved to 'nn_roc_curve.png'
+Confusion matrix has been saved to 'nn_confusion_matrix.png'
+
+Performing cross-validation...
+Cross-validation accuracy: 0.6664 ± 0.0266

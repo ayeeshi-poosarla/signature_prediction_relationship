@@ -1,0 +1,184 @@
+Random Forest Classification Results
+===================================
+
+Loading and preparing data...
+Dataset loaded with 1094 samples and 178 features.
+Extracted 38 mutation features
+Extracted 38 normalized mutation features
+Extracted 100 gene expression features
+No specific immune marker genes provided. Using PCA to identify patterns...
+Created target variable using PCA. Class distribution: [547 547]
+
+--- Using normalized mutation features for Random Forest model ---
+Including 15 most variable gene expression features for modeling
+Training set: 820 samples
+Testing set: 274 samples
+
+Trying feature selection with k=15...
+Selected 15 top features:
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+  ENSG00000143632.14: F-score=1.5645, p-value=2.1137e-01
+  ENSG00000140443.15: F-score=5.4428, p-value=1.9891e-02
+  ENSG00000153002.12: F-score=5.2224, p-value=2.2553e-02
+  ENSG00000167676.4: F-score=36.2439, p-value=2.6271e-09
+  ENSG00000141367.12: F-score=27.5379, p-value=1.9642e-07
+  ENSG00000120885.22: F-score=4.8898, p-value=2.7292e-02
+Preliminary accuracy with k=15: 0.6387
+
+Trying feature selection with k=20...
+Selected 20 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+  ENSG00000143632.14: F-score=1.5645, p-value=2.1137e-01
+  ENSG00000167531.6: F-score=1.0513, p-value=3.0552e-01
+  ENSG00000140443.15: F-score=5.4428, p-value=1.9891e-02
+  ENSG00000153002.12: F-score=5.2224, p-value=2.2553e-02
+  ENSG00000167676.4: F-score=36.2439, p-value=2.6271e-09
+  ENSG00000141367.12: F-score=27.5379, p-value=1.9642e-07
+  ENSG00000108298.12: F-score=1.4081, p-value=2.3572e-01
+  ENSG00000120885.22: F-score=4.8898, p-value=2.7292e-02
+Preliminary accuracy with k=20: 0.6533
+
+Trying feature selection with k=25...
+Selected 25 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_IGR: F-score=1.0000, p-value=3.1761e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_->G: F-score=1.0324, p-value=3.0991e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_C>G: F-score=0.9903, p-value=3.1997e-01
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+  ENSG00000092054.13: F-score=0.9165, p-value=3.3867e-01
+  ENSG00000143632.14: F-score=1.5645, p-value=2.1137e-01
+  ENSG00000135222.6: F-score=1.0007, p-value=3.1745e-01
+  ENSG00000167531.6: F-score=1.0513, p-value=3.0552e-01
+  ENSG00000140443.15: F-score=5.4428, p-value=1.9891e-02
+  ENSG00000153002.12: F-score=5.2224, p-value=2.2553e-02
+  ENSG00000167676.4: F-score=36.2439, p-value=2.6271e-09
+  ENSG00000141367.12: F-score=27.5379, p-value=1.9642e-07
+  ENSG00000108298.12: F-score=1.4081, p-value=2.3572e-01
+  ENSG00000120885.22: F-score=4.8898, p-value=2.7292e-02
+Preliminary accuracy with k=25: 0.6752
+
+Trying feature selection with k=30...
+Selected 30 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_Frame_Shift_Ins: F-score=0.7585, p-value=3.8405e-01
+  Norm_Type_IGR: F-score=1.0000, p-value=3.1761e-01
+  Norm_Type_Intron: F-score=0.7749, p-value=3.7897e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Nonstop_Mutation: F-score=0.8112, p-value=3.6804e-01
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_->G: F-score=1.0324, p-value=3.0991e-01
+  Norm_SNV_->T: F-score=0.8005, p-value=3.7122e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_C>G: F-score=0.9903, p-value=3.1997e-01
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+  ENSG00000125414.19: F-score=0.6585, p-value=4.1732e-01
+  ENSG00000092054.13: F-score=0.9165, p-value=3.3867e-01
+  ENSG00000143632.14: F-score=1.5645, p-value=2.1137e-01
+  ENSG00000135222.6: F-score=1.0007, p-value=3.1745e-01
+  ENSG00000167531.6: F-score=1.0513, p-value=3.0552e-01
+  ENSG00000140443.15: F-score=5.4428, p-value=1.9891e-02
+  ENSG00000153002.12: F-score=5.2224, p-value=2.2553e-02
+  ENSG00000167676.4: F-score=36.2439, p-value=2.6271e-09
+  ENSG00000141367.12: F-score=27.5379, p-value=1.9642e-07
+  ENSG00000108298.12: F-score=1.4081, p-value=2.3572e-01
+  ENSG00000120885.22: F-score=4.8898, p-value=2.7292e-02
+Preliminary accuracy with k=30: 0.6460
+
+Selected optimal k=25 for feature selection
+Selected 25 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_IGR: F-score=1.0000, p-value=3.1761e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_->G: F-score=1.0324, p-value=3.0991e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_C>G: F-score=0.9903, p-value=3.1997e-01
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+  ENSG00000092054.13: F-score=0.9165, p-value=3.3867e-01
+  ENSG00000143632.14: F-score=1.5645, p-value=2.1137e-01
+  ENSG00000135222.6: F-score=1.0007, p-value=3.1745e-01
+  ENSG00000167531.6: F-score=1.0513, p-value=3.0552e-01
+  ENSG00000140443.15: F-score=5.4428, p-value=1.9891e-02
+  ENSG00000153002.12: F-score=5.2224, p-value=2.2553e-02
+  ENSG00000167676.4: F-score=36.2439, p-value=2.6271e-09
+  ENSG00000141367.12: F-score=27.5379, p-value=1.9642e-07
+  ENSG00000108298.12: F-score=1.4081, p-value=2.3572e-01
+  ENSG00000120885.22: F-score=4.8898, p-value=2.7292e-02
+Performing grid search for hyperparameter tuning (simplified)...
+Best hyperparameters: {'class_weight': 'balanced', 'max_depth': None, 'n_estimators': 100}
+
+Model Accuracy: 0.6752
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.67      0.70      0.68       137
+           1       0.68      0.65      0.67       137
+
+    accuracy                           0.68       274
+   macro avg       0.68      0.68      0.67       274
+weighted avg       0.68      0.68      0.67       274
+
+
+Feature Importance (top 10):
+                        Feature  Importance
+23           ENSG00000108298.12    0.117893
+22           ENSG00000141367.12    0.104362
+21            ENSG00000167676.4    0.093726
+19           ENSG00000140443.15    0.066898
+24           ENSG00000120885.22    0.063675
+20           ENSG00000153002.12    0.054179
+16           ENSG00000143632.14    0.045909
+12                 Norm_SNV_C>A    0.045567
+0               Total_Mutations    0.043617
+3   Norm_Type_Nonsense_Mutation    0.043279
+ROC-AUC Score: 0.7178
+ROC curve has been saved to 'rf_roc_curve.png'
+Confusion matrix has been saved to 'rf_confusion_matrix.png'
+Feature importance plot has been saved to 'rf_feature_importance.png'
+
+Performing cross-validation...
+Cross-validation accuracy: 0.7066 ± 0.0184

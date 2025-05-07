@@ -1,0 +1,58 @@
+SVM Classification Results
+========================
+
+Loading and preparing data...
+Dataset loaded with 1094 samples and 178 features.
+Extracted 38 mutation features
+Extracted 38 normalized mutation features
+Extracted 100 gene expression features
+No specific immune marker genes provided. Using PCA to identify patterns...
+Created target variable using PCA. Class distribution: [547 547]
+
+--- Using normalized mutation features for SVM model ---
+Training set: 820 samples
+Testing set: 274 samples
+Selected 20 top features:
+  Total_Mutations: F-score=1.0876, p-value=2.9731e-01
+  Norm_Type_3'UTR: F-score=1.8987, p-value=1.6860e-01
+  Norm_Type_Frame_Shift_Ins: F-score=0.7585, p-value=3.8405e-01
+  Norm_Type_IGR: F-score=1.0000, p-value=3.1761e-01
+  Norm_Type_Intron: F-score=0.7749, p-value=3.7897e-01
+  Norm_Type_Nonsense_Mutation: F-score=4.1436, p-value=4.2114e-02
+  Norm_Type_Nonstop_Mutation: F-score=0.8112, p-value=3.6804e-01
+  Norm_Type_Silent: F-score=1.3521, p-value=2.4525e-01
+  Norm_Type_Translation_Start_Site: F-score=2.2346, p-value=1.3534e-01
+  Norm_SNV_->A: F-score=5.3796, p-value=2.0619e-02
+  Norm_SNV_->C: F-score=1.8773, p-value=1.7101e-01
+  Norm_SNV_->G: F-score=1.0324, p-value=3.0991e-01
+  Norm_SNV_->T: F-score=0.8005, p-value=3.7122e-01
+  Norm_SNV_A>-: F-score=1.1050, p-value=2.9349e-01
+  Norm_SNV_A>C: F-score=4.1536, p-value=4.1867e-02
+  Norm_SNV_A>T: F-score=1.6258, p-value=2.0264e-01
+  Norm_SNV_C>A: F-score=7.0541, p-value=8.0624e-03
+  Norm_SNV_C>G: F-score=0.9903, p-value=3.1997e-01
+  Norm_SNV_C>T: F-score=0.5819, p-value=4.4578e-01
+  Norm_SNV_T>C: F-score=2.8690, p-value=9.0683e-02
+Performing grid search for hyperparameter tuning...
+Best hyperparameters: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
+
+Model Accuracy: 0.5474
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.56      0.45      0.50       137
+           1       0.54      0.65      0.59       137
+
+    accuracy                           0.55       274
+   macro avg       0.55      0.55      0.54       274
+weighted avg       0.55      0.55      0.54       274
+
+ROC-AUC Score: 0.5475
+ROC curve has been saved to 'svm_roc_curve.png'
+Confusion matrix has been saved to 'svm_confusion_matrix.png'
+
+Performing cross-validation...
+Cross-validation accuracy: 0.5064 ± 0.0207
+
+SVM analysis completed successfully.
